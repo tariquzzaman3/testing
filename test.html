@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html> <head>
+<title>Peace be upon you</title>
+<link rel="icon" type="image/png" href="https://i.postimg.cc/kgR1sRR0/image.png"/>
+<style>
+body, input, button, div { text-align: center; font-size: 150%; }
+input { margin: 3% 0 0 0; background: rgba(0,0,0,0.25); border: 5px transparent; border-radius: 8px; color: black; }
+img { width: 125px; height: 125px; margin: 1% 1% 1% 75%;
+    -webkit-animation:spin 300s linear infinite;
+    -moz-animation:spin 300s linear infinite;
+    animation:spin 300s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+h6 { position: fixed; clear: both; width: 100%; height: 30px; bottom: 0; border: none; padding: 13px 0 0 0; text-align: center; }
+button { background: rgba(0,0,0,0.25); margin: 5px; border: 3px solid red; border-radius: 8px; }
+input, div { width: 90%; }
+div { background: rgba(0,0,0,0.25); margin: 0 0 0  5% ; border: 5px transparent;  border-radius: 8px; align: center; }
+html { background: url(https://i.postimg.cc/Sxc8LJ8K/image.jpg) no-repeat center center fixed; background-size: cover; height: 100%; overflow: hidden; }
+</style> </head>
+<a href="javascript:location.reload()" ><img src="https://i.postimg.cc/Qt7ttJ4x/image.png" alt="Refresh"></a>
+<input placeholder="" id="myinput"><br>
+<button onclick="encrypt()">Write </button>
+<button onclick="decrypt()">Read</button>
+<div id="result"></div>
+<script>
+function encrypt(){
+var rawtext = document.getElementById("myinput").value
+var temptext = "";
+for (i = 0; i< rawtext.length;i++){
+temptext += enc(rawtext[i]); }
+document.getElementById("result").innerHTML = temptext; }
+function decrypt(){
+var rawtext = document.getElementById("myinput").value
+var temptext = "";
+for (i = 0; i< rawtext.length;i++){
+temptext += dec(rawtext[i]); }
+document.getElementById("result").innerHTML = temptext; }
+function enc(x){
+switch (x){
+case "a":
+return "ߊ";
+break;
+case "b":
+return "け";
+break;
+case "c":
+return "ង";
+break;
+case "d":
+return "ߝ";
+break; } }
+function dec(x){
+switch (x){
+case "ߊ":
+return "a";
+break;
+case "け":
+return "b";
+break;
+case "ង":
+return "c";
+break;
+case "ߝ":
+return "d";
+break; } }
+</script>
+<h6>v 3.2<br>©THE DEVELOPER TEAM</h6>
+</body> </html>
